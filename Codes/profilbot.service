@@ -1,0 +1,15 @@
+[Unit]
+Description=Telegram bot 'Profil Video'
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/TeleList/
+ExecStart=/usr/bin/python3 profilbot.py
+RestartSec=10
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
